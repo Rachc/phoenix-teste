@@ -1,0 +1,28 @@
+version: "3.2"
+services:
+  db:
+    image: postgres:12.1-alpine
+    ports:
+      - "5432"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+  phoenix_teste:
+    env_file: .env
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "4000:4000"
+    volumes:
+      - .:/app
+      - elixir-artifacts:/opt/elixir_artifacts
+    depends_on:
+      - db
+    environment:
+      MIX_DEPS_PATH: "/opt/elixir_artifacts/deps"
+      MIX_BUILD_PATH: "/opt/elixir_artifacts/_build"
+    command:
+      - ./run.sh
+volumes:
+  elixir-artifacts: {}
