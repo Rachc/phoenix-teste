@@ -5,7 +5,7 @@ config :phoenix_teste, PhoenixTeste.Repo,
   username: "postgres",
   password: "",
   database: "phoenix_teste_dev",
-  host: "db",
+  hostname: "db",
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
 

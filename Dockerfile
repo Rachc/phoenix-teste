@@ -7,7 +7,7 @@ RUN apt-get install --yes build-essential inotify-tools postgresql-client
 # Install node
 # RUN curl -sL https://deb.nodesource.com/setup_6.x -o nodesource_setup.sh
 # RUN bash nodesource_setup.sh
-# RUN apt-get install nodejs
+# RUN apt-get install -y nodejs
 
 # Install Phoenix packages
 RUN mix local.hex --force

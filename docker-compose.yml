@@ -4,9 +4,6 @@ services:
     image: postgres:12.1-alpine
     ports:
       - "5432"
-    # environment:
-    #   - POSTGRES_USER=postgres
-    #   - POSTGRES_PASSWORD=postgres
   phoenix_teste:
     env_file: .env
     build:
