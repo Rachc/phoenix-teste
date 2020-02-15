@@ -3,7 +3,7 @@ use Mix.Config
 # Configure your database
 config :phoenix_teste, PhoenixTeste.Repo,
   username: "postgres",
-  password: "postgres",
+  password: "",
   database: "phoenix_teste_dev",
   host: "db",
   show_sensitive_data_on_connection_error: true,
